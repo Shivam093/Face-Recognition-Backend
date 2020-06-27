@@ -12,10 +12,8 @@ const image =require('./controllers/image');
 const db =knex({
 	client: 'pg',
 	connection:{
-		host: 'postgresql-objective-81623',
-		user: 'postgres',
-		password: 'Shivam123',
-		database: 'brain'
+		host: 'process.env.DATABASE_URL',
+		ssl: true
 	}
 });
 
